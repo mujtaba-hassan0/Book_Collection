@@ -4,10 +4,21 @@ public class Book{
     private String author;
     private float price;
 
-    public void setTitle(String title){
-        this.title = title;
+public Book() {
+        this.title = "";
+        this.author = "";
+        this.price = 0.0f;
     }
 
+    public Book(String title, String author, float price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+
+    public void setTitle(String title){
+        this.title=title;
+    }
     public void setAuthor(String author){
         this.author=author;
     }
@@ -28,7 +39,7 @@ public class Book{
     }
 
     public String toString(){
-        return "Title:"+this.title+"\nAuthor:"+this.author+"\nPrice:"+String.format("%.2f",this.price);
+        return " Title:"+this.title+", Author: "+this.author+", Price: "+String.format("%.2f",this.price)+"$" ;
     }
     
 }
